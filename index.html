@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Epitychía</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- AUTH -->
+  <div>
+    <input id="username" placeholder="Username">
+    <input id="email" placeholder="Email">
+    <input id="password" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+  </div>
+
+  <!-- TASK -->
+  <button onclick="completeTask()">Complete Task (+20)</button>
+
+  <!-- LEADERBOARD -->
+  <h3>Leaderboard</h3>
+  <ul id="leaderboard"></ul>
+  <button onclick="loadLeaderboard()">Load Leaderboard</button>
+
+  <!-- PAYMENT -->
+  <button onclick="payNow()">Upgrade to Pro (₹99)</button>
+
+  <!-- PROFILE -->
+  <h3>Profile</h3>
+  <p>Code: <span id="code"></span></p>
+  <p>Earnings: <span id="earnings"></span></p>
+  <p>Referrals: <span id="referrals"></span></p>
+  <input id="refLink" readonly>
+  <button onclick="copyLink()">Copy Link</button>
+
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
