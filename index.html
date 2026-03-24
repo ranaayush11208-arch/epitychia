@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Epitychía</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-  <!-- AUTH -->
-  <div>
-    <input id="username" placeholder="Username">
-    <input id="email" placeholder="Email">
-    <input id="password" placeholder="Password">
-    <button onclick="signup()">Signup</button>
+<header>
+  <h1>Epitychía</h1>
+  <nav>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Level Up Your Life Through Learning</h2>
+  <p>Epitychía is a gamified AI-powered study platform that helps students stay consistent with daily tasks, track their progress, and improve performance.</p>
+  <div class="buttons">
+    <button class="primary">Start Learning</button>
+    <button class="secondary">Upgrade to Pro</button>
   </div>
+</section>
 
-  <!-- TASK -->
-  <button onclick="completeTask()">Complete Task (+20)</button>
+<section id="features" class="features">
+  <h2>Features</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Daily AI Tasks</h3>
+      <p>Get personalized study tasks every day</p>
+    </div>
+    <div class="card">
+      <h3>Weekly Tests</h3>
+      <p>Test your knowledge with AI-generated tests</p>
+    </div>
+    <div class="card">
+      <h3>Leaderboard</h3>
+      <p>Compete with other students and climb ranks</p>
+    </div>
+    <div class="card">
+      <h3>Performance Tracking</h3>
+      <p>Track your progress and improve over time</p>
+    </div>
+  </div>
+</section>
 
-  <!-- LEADERBOARD -->
-  <h3>Leaderboard</h3>
-  <ul id="leaderboard"></ul>
-  <button onclick="loadLeaderboard()">Load Leaderboard</button>
+<section class="dashboard">
+  <h2>Dashboard Preview</h2>
+  <div class="dashboard-card">
+    <p><strong>Points:</strong> 240</p>
+    <p><strong>Rank:</strong> Bronze</p>
+    <p><strong>Tasks Completed:</strong> 5</p>
+    <p><strong>Streak:</strong> 3 days</p>
 
-  <!-- PAYMENT -->
-  <button onclick="payNow()">Upgrade to Pro (₹99)</button>
+    <h4>Today's Tasks</h4>
+    <ul>
+      <li>Study Algebra ✅</li>
+      <li>Revise Physics ❌</li>
+      <li>Practice MCQs ❌</li>
+    </ul>
+  </div>
+</section>
 
-  <!-- PROFILE -->
-  <h3>Profile</h3>
-  <p>Code: <span id="code"></span></p>
-  <p>Earnings: <span id="earnings"></span></p>
-  <p>Referrals: <span id="referrals"></span></p>
-  <input id="refLink" readonly>
-  <button onclick="copyLink()">Copy Link</button>
+<section id="pricing" class="pricing">
+  <h2>Pricing</h2>
+  <div class="card pricing-card">
+    <h3>Pro Plan – ₹99/month</h3>
+    <ul>
+      <li>Unlimited AI help</li>
+      <li>Unlimited tests</li>
+      <li>Advanced analytics</li>
+    </ul>
+    <button class="primary">Upgrade to Pro</button>
+  </div>
+</section>
 
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-  <script type="module" src="script.js"></script>
+<section class="affiliate">
+  <h2>Earn with Epitychía</h2>
+  <p>Invite your friends and earn ₹25 for every successful subscription using your referral code.</p>
+  <div class="ref-box">epitychia.onrender.com?ref=EPY12345</div>
+</section>
+
+<section class="about">
+  <h2>About</h2>
+  <p>Epitychía focuses on making studying engaging by combining AI, gamification, and habit-building systems.</p>
+</section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>Email: epitychia@gmail.com</p>
+</section>
+
+<footer>
+  <a href="privacy.html">Privacy Policy</a>
+  <a href="terms.html">Terms & Conditions</a>
+  <a href="contact.html">Contact</a>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

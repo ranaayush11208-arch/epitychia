@@ -1,22 +1,97 @@
 body {
-  font-family: Arial;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f1a;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
-  background: #0f172a;
-  color: white;
 }
 
-input, button {
-  margin: 5px;
-  padding: 10px;
+nav a {
+  margin-left: 20px;
+  color: #aaa;
+  text-decoration: none;
 }
 
-button {
-  background: #6366f1;
-  color: white;
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+}
+
+.buttons button {
+  margin: 10px;
+}
+
+.primary {
+  background: linear-gradient(45deg, #6c5ce7, #00a8ff);
   border: none;
-  cursor: pointer;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
 }
 
-button:hover {
-  opacity: 0.8;
+.secondary {
+  background: transparent;
+  border: 1px solid #555;
+  padding: 10px 20px;
+  color: white;
+  border-radius: 8px;
+}
+
+.features, .pricing, .dashboard, .affiliate, .about, .contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.dashboard-card {
+  max-width: 300px;
+  margin: auto;
+  background: #1a1a2e;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.pricing-card {
+  max-width: 300px;
+  margin: auto;
+}
+
+.ref-box {
+  background: #1a1a2e;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #222;
+}
+
+footer a {
+  margin: 0 10px;
+  color: #aaa;
+  text-decoration: none;
 }
