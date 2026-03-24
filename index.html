@@ -1,36 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Epitychia</title>
-
-  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .glass {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
 </head>
 
-<body class="bg-gradient-to-br from-white to-blue-50 text-gray-800">
+<body class="bg-gradient-to-br from-blue-50 via-white to-purple-100 text-gray-800">
 
 <!-- HERO -->
 <section class="text-center py-20 px-6">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4 fade">Learn Smarter, Not Harder</h1>
-  <p class="text-lg text-gray-600 mb-6 fade delay">AI-powered learning platform that adapts to you</p>
+  <h1 class="text-4xl md:text-6xl font-bold mb-4">Your AI-Powered Learning System</h1>
+  <p class="text-lg text-gray-600 mb-6">Stop wasting time. Epitychia builds your personalized learning path instantly.</p>
 
-  <div class="space-x-4 fade delay2">
-    <button class="btn-primary">Start Learning</button>
-    <button class="btn-secondary">Watch Demo</button>
+  <div class="space-x-4">
+    <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl hover:scale-105 transition">Start Free</button>
+    <button class="border px-6 py-3 rounded-xl hover:bg-gray-100 transition">See Demo</button>
   </div>
 
   <!-- Dashboard Preview -->
-  <div class="mt-12 max-w-xl mx-auto card">
-    <h3 class="font-semibold mb-2">Your Dashboard</h3>
-    <p>Progress: 65%</p>
-    <div class="w-full bg-gray-200 rounded-full h-3 mt-2">
-      <div class="bg-blue-500 h-3 rounded-full w-2/3"></div>
+  <div class="mt-12 max-w-4xl mx-auto glass rounded-2xl shadow-xl p-6 text-left">
+    <h3 class="font-semibold mb-4">Dashboard</h3>
+    <p>Math - 70%</p>
+    <div class="w-full bg-gray-200 h-2 rounded mb-2">
+      <div class="bg-blue-500 h-2 rounded w-2/3"></div>
     </div>
+    <p>Physics - 50%</p>
+    <div class="w-full bg-gray-200 h-2 rounded mb-2">
+      <div class="bg-purple-500 h-2 rounded w-1/2"></div>
+    </div>
+    <p class="mt-4 text-sm text-gray-600">AI Recommendation: Focus on weak Physics concepts today.</p>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="text-center py-10">
+  <p class="text-gray-500 mb-4">Trusted by 10,000+ students</p>
+  <div class="flex justify-center gap-6 text-gray-400 text-sm">
+    <span>EduCorp</span>
+    <span>Learnify</span>
+    <span>SkillUp</span>
+    <span>NextGen</span>
   </div>
 </section>
 
@@ -38,11 +57,36 @@
 <section class="py-16 px-6 text-center">
   <h2 class="text-3xl font-bold mb-10">Features</h2>
   <div class="grid md:grid-cols-4 gap-6">
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">🤖 AI Learning Path<br><span class="text-sm text-gray-600">Personal roadmap</span></div>
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">📝 Smart Notes<br><span class="text-sm text-gray-600">Instant summaries</span></div>
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">💬 AI Chat<br><span class="text-sm text-gray-600">Solve doubts</span></div>
+    <div class="glass p-6 rounded-xl hover:scale-105 transition">📊 Analytics<br><span class="text-sm text-gray-600">Track progress</span></div>
+  </div>
+</section>
 
-    <div class="card hover-card">🤖 AI Learning Paths</div>
-    <div class="card hover-card">📝 Smart Notes</div>
-    <div class="card hover-card">💬 AI Doubt Solver</div>
-    <div class="card hover-card">📊 Progress Tracking</div>
+<!-- DEMO -->
+<section class="py-16 px-6">
+  <h2 class="text-3xl font-bold text-center mb-10">Interactive Demo</h2>
+
+  <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+
+    <!-- CHAT -->
+    <div class="glass p-4 rounded-xl shadow">
+      <div id="chat" class="space-y-2 h-64 overflow-y-auto text-sm">
+        <div class="text-right text-blue-600">Teach me Newton's Laws in simple terms</div>
+        <div class="bg-white p-2 rounded shadow-sm">
+          Newton’s Laws: 1) Objects stay still/move unless force acts. 2) Force = mass × acceleration. 3) Every action has equal reaction.
+        </div>
+      </div>
+      <button onclick="fakeChat()" class="mt-4 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition">Ask Again</button>
+    </div>
+
+    <!-- DASHBOARD -->
+    <div class="glass p-6 rounded-xl shadow">
+      <h3 class="font-semibold mb-4">Progress Analytics</h3>
+      <div class="h-32 bg-gradient-to-r from-blue-200 to-purple-200 rounded"></div>
+      <p class="mt-4 text-sm text-gray-600">Weekly progress improving 📈</p>
+    </div>
 
   </div>
 </section>
@@ -51,68 +95,74 @@
 <section class="py-16 bg-blue-50 text-center px-6">
   <h2 class="text-3xl font-bold mb-10">How It Works</h2>
   <div class="grid md:grid-cols-3 gap-6">
-    <div>1️⃣ Enter Goal</div>
-    <div>2️⃣ AI Roadmap</div>
-    <div>3️⃣ Learn Smart</div>
-  </div>
-</section>
-
-<!-- DEMO -->
-<section class="py-16 px-6">
-  <h2 class="text-3xl font-bold text-center mb-10">Live Demo</h2>
-
-  <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-
-    <!-- Chat -->
-    <div class="card">
-      <div id="chat" class="space-y-2 h-64 overflow-y-auto text-sm">
-        <div class="user-msg">Explain Newton's Laws</div>
-        <div class="ai-msg">Newton's Laws explain motion: inertia, F=ma, and action-reaction.</div>
-      </div>
-      <button onclick="fakeChat()" class="btn-primary w-full mt-4">Ask Again</button>
-    </div>
-
-    <!-- Fake Chart -->
-    <div class="card">
-      <h3 class="mb-4 font-semibold">Progress</h3>
-      <div class="h-32 bg-blue-100 rounded"></div>
-    </div>
-
+    <div>1️⃣ Choose your goal</div>
+    <div>2️⃣ AI creates roadmap</div>
+    <div>3️⃣ Learn daily with AI</div>
   </div>
 </section>
 
 <!-- PRICING -->
 <section class="py-16 text-center px-6">
   <h2 class="text-3xl font-bold mb-10">Pricing</h2>
+  <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
 
-  <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
-    <div class="card">
-      <h3>Free Plan</h3>
-      <p>Basic features</p>
+    <div class="glass p-6 rounded-xl">
+      <h3 class="font-semibold">Free Plan</h3>
+      <p class="text-gray-600">Basic features</p>
     </div>
 
-    <div class="card border-2 border-blue-500">
-      <h3>Pro Plan ₹299/month</h3>
-      <p>All features unlocked</p>
+    <div class="glass p-6 rounded-xl border-2 border-blue-500 scale-105">
+      <h3 class="font-semibold">Pro Plan ₹299/month</h3>
+      <p class="text-gray-600">All features unlocked</p>
+      <button class="mt-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-5 py-2 rounded">Upgrade</button>
     </div>
+
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="py-16 bg-gray-50 text-center px-6">
+  <h2 class="text-3xl font-bold mb-10">What Students Say</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white p-4 rounded shadow">"Helped me stay consistent daily."</div>
+    <div class="bg-white p-4 rounded shadow">"AI makes concepts super easy."</div>
+    <div class="bg-white p-4 rounded shadow">"Best study tool I’ve used."</div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="py-16 bg-blue-600 text-white text-center">
-  <h2 class="text-3xl font-bold mb-4">Start Your Learning Journey Today</h2>
-  <button class="bg-white text-blue-600 px-6 py-3 rounded-xl hover:scale-105 transition">
-    Get Started
-  </button>
+<section class="py-16 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
+  <h2 class="text-3xl font-bold mb-4">Start Learning Smarter Today</h2>
+  <button class="bg-white text-blue-600 px-6 py-3 rounded-xl hover:scale-105 transition">Get Started</button>
 </section>
 
 <!-- FOOTER -->
 <footer class="py-6 text-center text-sm text-gray-500">
-  <a href="#">About</a> •
-  <a href="#">Contact</a> •
-  <a href="#">Privacy</a>
+  <div class="space-x-4">
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy</a>
+  </div>
+  <p class="mt-2">© 2026 Epitychia</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+function fakeChat(){
+  const chat = document.getElementById('chat');
+
+  const user = document.createElement('div');
+  user.className = "text-right text-blue-600";
+  user.innerText = "Explain AI simply";
+
+  const ai = document.createElement('div');
+  ai.className = "bg-white p-2 rounded shadow-sm";
+  ai.innerText = "AI is technology that allows machines to think and learn like humans.";
+
+  chat.appendChild(user);
+  chat.appendChild(ai);
+  chat.scrollTop = chat.scrollHeight;
+}
+</script>
+
 </body>
 </html>
